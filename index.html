@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Frame Extractor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h1><i class="fas fa-film"></i> Video Frame Extractor</h1>
+            <p class="subtitle">Extract, view, and save frames from your videos</p>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-box" id="upload-box">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <input type="file" id="video-file" accept="video/*" hidden>
+                <label for="video-file" class="upload-label">
+                    Choose a video or drag it here
+                </label>
+                <p class="file-info" id="file-info">Supported formats: MP4, WebM, MOV</p>
+            </div>
+        </div>
+
+        <div class="frames-section">
+            <div class="frames-header">
+                <h2>Extracted Frames</h2>
+                <span class="frame-counter" id="frame-counter">0 frames</span>
+            </div>
+            <div id="frame-container" class="frame-container">
+                <!-- Frames will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="controls">
+                <button class="control-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                    <span>Play</span>
+                </button>
+                <button class="control-btn" id="pause-btn">
+                    <i class="fas fa-pause"></i>
+                    <span>Pause</span>
+                </button>
+                <button class="control-btn" id="skip-btn">
+                    <i class="fas fa-forward"></i>
+                    <span>Skip</span>
+                </button>
+                <button class="control-btn primary" id="export-btn">
+                    <i class="fas fa-download"></i>
+                    <span>Export Frames</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
